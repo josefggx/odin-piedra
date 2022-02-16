@@ -8,6 +8,12 @@ const computerPlay = () => {
     return play;
 }
 
+const gameReset = () => {
+    playerCount = 1;
+    computerCount = 1;
+    i = 0;
+}
+
 const oneRound = (playerSelection, computerSelection) => {
     const player = playerSelection.toLowerCase();
     const computer = computerSelection.toLowerCase();
@@ -46,18 +52,13 @@ const game = () => {
     }
     if(playerCount === 5) {
         console.log(`You Won: Player ${playerCount} - ${computerCount} Computer`);
-        playerCount = 1;
-        computerCount = 1;
-        i = 0;
+        gameReset();
         return "Thanks for playing!"
     } else if(computerCount === 5) {
         console.log(`You Lose: Player ${playerCount} - ${computerCount} Computer`);
-        playerCount = 1;
-        computerCount = 1;
-        i = 0;
+        gameReset();
         return "Thanks for playing!"
     }
-
 }
 
 console.log(game());
