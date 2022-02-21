@@ -3,7 +3,7 @@ let computerCount = 0;
 let i = 0;
 
 const computerPlay = () => {
-    const playList = ["Rock", "Paper", "Scissors"]
+    const playList = ["Rock", "Paper", "Scissors"];
     const play = playList[Math.floor(Math.random() * playList.length)];
     return play;
 }
@@ -62,4 +62,5 @@ const game = () => {
 }
 
 console.log(game());
-
+console.log(game());
+console.log(game());
